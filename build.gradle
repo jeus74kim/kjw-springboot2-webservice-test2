@@ -1,0 +1,39 @@
+buildscript {
+    ext{
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+plugins {
+    id 'java'
+}
+plugins {
+    id 'eclipse'
+}
+plugins {
+    id "org.springframework.boot" version "2.1.7.RELEASE"
+}
+
+plugins {
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+}
+
+group 'com.kjw.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.5'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.4.5'
+
+
+}
